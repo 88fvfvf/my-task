@@ -542,29 +542,29 @@ function Form() {
     }, []);
     const handleSubmit = async (e)=>{
         e.preventDefault();
-        const token = localStorage.getItem('token'); // Получаем токен из localStorage
-        const data = {
-            title: "Создать баннер",
-            description: "Создать баннер в котором есть реклама нашего бренда",
-            budget_from: 0,
-            budget_to: 5000,
-            deadline_days: 5,
-            number_of_reminders: 5,
-            is_hard: true,
-            tags: [],
-            rules: {
-                budget_from: 0,
-                budget_to: 5000,
+        const token = localStorage.getItem('token');
+        const params = new URLSearchParams({
+            title: taskTitle,
+            description: taskDesc,
+            budget_from: budget.min.toString(),
+            budget_to: budget.max.toString(),
+            deadline_days: deadline.toString(),
+            number_of_reminders: reminders.toString(),
+            is_hard: 'true',
+            tags: tags.join(','),
+            private_content: 'null',
+            all_auto_responses: autoResponses.toString(),
+            rules: JSON.stringify({
+                budget_from: 5000,
+                budget_to: 8000,
                 deadline_days: 5,
                 qty_freelancers: 1,
-                task_id: 2827
-            },
-            all_auto_responses: true
-        };
+                task_id: 2845
+            })
+        });
         try {
-            const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].post('https://deadlinetaskbot.productlove.ru/api/v1/tasks/client/newhardtask', data, {
+            const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].get('https://deadlinetaskbot.productlove.ru/api/v1/tasks/client/newhardtask?' + params.toString(), {
                 headers: {
-                    'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}` // если требуется токен в заголовке
                 }
             });
@@ -587,7 +587,7 @@ function Form() {
                 children: "Создать задачу"
             }, void 0, false, {
                 fileName: "[project]/src/app/form/Form.tsx",
-                lineNumber: 77,
+                lineNumber: 75,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -596,7 +596,7 @@ function Form() {
                 children: "Название задачи"
             }, void 0, false, {
                 fileName: "[project]/src/app/form/Form.tsx",
-                lineNumber: 80,
+                lineNumber: 78,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$input$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Input$3e$__["Input"], {
@@ -607,7 +607,7 @@ function Form() {
                 onChange: (e)=>setTaskTitle(e.target.value)
             }, void 0, false, {
                 fileName: "[project]/src/app/form/Form.tsx",
-                lineNumber: 81,
+                lineNumber: 79,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -616,7 +616,7 @@ function Form() {
                 children: "Описание"
             }, void 0, false, {
                 fileName: "[project]/src/app/form/Form.tsx",
-                lineNumber: 90,
+                lineNumber: 88,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$input$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Input$3e$__["Input"], {
@@ -627,7 +627,7 @@ function Form() {
                 onChange: (e)=>setTaskDesc(e.target.value)
             }, void 0, false, {
                 fileName: "[project]/src/app/form/Form.tsx",
-                lineNumber: 91,
+                lineNumber: 89,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TagInput$2f$TagInput$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -635,7 +635,7 @@ function Form() {
                 setTagsProps: setTags
             }, void 0, false, {
                 fileName: "[project]/src/app/form/Form.tsx",
-                lineNumber: 100,
+                lineNumber: 98,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$BudgetSlider$2f$BudgetSlider$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -643,7 +643,7 @@ function Form() {
                 setBudget: setBudget
             }, void 0, false, {
                 fileName: "[project]/src/app/form/Form.tsx",
-                lineNumber: 103,
+                lineNumber: 101,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$Deadline$2f$DeadlineInput$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -651,7 +651,7 @@ function Form() {
                 setDeadline: setDeadline
             }, void 0, false, {
                 fileName: "[project]/src/app/form/Form.tsx",
-                lineNumber: 106,
+                lineNumber: 104,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$RemindersInput$2f$RemindersInput$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -659,7 +659,7 @@ function Form() {
                 setReminders: setReminders
             }, void 0, false, {
                 fileName: "[project]/src/app/form/Form.tsx",
-                lineNumber: 109,
+                lineNumber: 107,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$AutoResponsesCheckbox$2f$AutoResponsesCheckbox$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -667,7 +667,7 @@ function Form() {
                 setAutoResponses: setAutoResponses
             }, void 0, false, {
                 fileName: "[project]/src/app/form/Form.tsx",
-                lineNumber: 112,
+                lineNumber: 110,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -676,13 +676,13 @@ function Form() {
                 children: "Отправить"
             }, void 0, false, {
                 fileName: "[project]/src/app/form/Form.tsx",
-                lineNumber: 115,
+                lineNumber: 113,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/form/Form.tsx",
-        lineNumber: 76,
+        lineNumber: 74,
         columnNumber: 9
     }, this);
 }

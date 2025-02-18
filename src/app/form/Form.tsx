@@ -28,37 +28,37 @@ export default function Form() {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        const token = localStorage.getItem('token');  // Получаем токен из localStorage
-        const data = {
-            title: "Создать баннер",
-            description: "Создать баннер в котором есть реклама нашего бренда",
-            budget_from: 0,
-            budget_to: 5000,
-            deadline_days: 5,
-            number_of_reminders: 5,
-            is_hard: true,
-            tags: [],
-            rules: {
-                budget_from: 0,
-                budget_to: 5000,
+        const token = localStorage.getItem('token');
+        const params = new URLSearchParams({
+            title: taskTitle,
+            description: taskDesc,
+            budget_from: budget.min.toString(),
+            budget_to: budget.max.toString(),
+            deadline_days: deadline.toString(),
+            number_of_reminders: reminders.toString(),
+            is_hard: 'true',  // Значение true передаем как строку
+            tags: tags.join(','),  // Теги передаем как строку через запятую
+            private_content: 'null',  // Если null, то передаем как строку
+            all_auto_responses: autoResponses.toString(),
+            rules: JSON.stringify({
+                budget_from: 5000,
+                budget_to: 8000,
                 deadline_days: 5,
                 qty_freelancers: 1,
-                task_id: 2827
-            },
-            all_auto_responses: true
-        };
-
+                task_id: 2845,
+            })
+        });
+    
         try {
-            const response = await axios.post(
-                'https://deadlinetaskbot.productlove.ru/api/v1/tasks/client/newhardtask',
-                data,
+            const response = await axios.get(
+                'https://deadlinetaskbot.productlove.ru/api/v1/tasks/client/newhardtask?' + params.toString(),
                 {
                     headers: {
-                        'Content-Type': 'application/json',
                         'Authorization': `Bearer ${token}` // если требуется токен в заголовке
                     }
                 }
             );
+    
             if (response.status === 200) {
                 alert('Задача успешно создана');
             } else {
@@ -69,8 +69,6 @@ export default function Form() {
             alert('Ошибка при отправке задачи');
         }
     };
-
-
 
     return (
         <form className={styles.formContainer} onSubmit={handleSubmit}>
