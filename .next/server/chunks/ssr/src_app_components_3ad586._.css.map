@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/humoyun/Desktop/my-project/my-task/src/app/components/BudgetSlider/BudgetSlider.module.css"],"sourcesContent":[".label {\n    font-size: 0.875rem;\n    line-height: 1.25rem;\n    --tw-text-opacity: 1;\n    color: rgb(14 116 144 / var(--tw-text-opacity, 1))\n}\r\n"],"names":[],"mappings":"AAAA"}},
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/humoyun/Desktop/my-project/my-task/src/app/components/TagInput/TagInput.module.css"],"sourcesContent":[".label {\n    font-size: 0.875rem;\n    line-height: 1.25rem;\n    --tw-text-opacity: 1;\n    color: rgb(14 116 144 / var(--tw-text-opacity, 1))\n}"],"names":[],"mappings":"AAAA"}},
+    {"offset": {"line": 16, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

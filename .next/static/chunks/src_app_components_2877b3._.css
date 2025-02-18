@@ -1,0 +1,65 @@
+/* [project]/src/app/components/BudgetSlider/BudgetSlider.module.css [app-client] (css) */
+.BudgetSlider-module__0ItECW__label {
+  font-size: .875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(14 116 144 / var(--tw-text-opacity, 1));
+}
+
+
+/* [project]/src/app/components/TagInput/TagInput.module.css [app-client] (css) */
+.TagInput-module__U8c6pG__label {
+  font-size: .875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(14 116 144 / var(--tw-text-opacity, 1));
+}
+
+
+/* [project]/src/app/components/Deadline/Deadline.module.css [app-client] (css) */
+.Deadline-module__A-GAha__label {
+  margin-bottom: .25rem;
+  display: block;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(14 116 144 / var(--tw-text-opacity, 1));
+}
+
+
+/* [project]/src/app/components/RemindersInput/Remainder.module.css [app-client] (css) */
+.Remainder-module__ngJJJW__label {
+  margin-bottom: .25rem;
+  display: block;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(14 116 144 / var(--tw-text-opacity, 1));
+}
+
+
+/* [project]/src/app/components/AutoResponsesCheckbox/AutoResponcses.module.css [app-client] (css) */
+.AutoResponcses-module__8G5kxq__container {
+  display: flex;
+  align-items: center;
+}
+
+.AutoResponcses-module__8G5kxq__container > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.AutoResponcses-module__8G5kxq__container {
+  padding-top: .5rem;
+}
+
+.AutoResponcses-module__8G5kxq__label {
+  font-size: .875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity, 1));
+}
+
+
+/*# sourceMappingURL=src_app_components_2877b3._.css.map*/

@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/humoyun/Desktop/my-project/my-task/src/app/components/BudgetSlider/BudgetSlider.module.css"],"sourcesContent":[".label {\n    font-size: 0.875rem;\n    line-height: 1.25rem;\n    --tw-text-opacity: 1;\n    color: rgb(14 116 144 / var(--tw-text-opacity, 1))\n}\r\n"],"names":[],"mappings":"AAAA"}},
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/humoyun/Desktop/my-project/my-task/src/app/components/TagInput/TagInput.module.css"],"sourcesContent":[".label {\n    font-size: 0.875rem;\n    line-height: 1.25rem;\n    --tw-text-opacity: 1;\n    color: rgb(14 116 144 / var(--tw-text-opacity, 1))\n}"],"names":[],"mappings":"AAAA"}},
+    {"offset": {"line": 16, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 19, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/humoyun/Desktop/my-project/my-task/src/app/components/Deadline/Deadline.module.css"],"sourcesContent":[".label {\n    margin-bottom: 0.25rem;\n    display: block;\n    font-size: 0.875rem;\n    line-height: 1.25rem;\n    --tw-text-opacity: 1;\n    color: rgb(14 116 144 / var(--tw-text-opacity, 1))\n}"],"names":[],"mappings":"AAAA"}},
+    {"offset": {"line": 27, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 30, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/humoyun/Desktop/my-project/my-task/src/app/components/RemindersInput/Remainder.module.css"],"sourcesContent":[".label {\n    margin-bottom: 0.25rem;\n    display: block;\n    font-size: 0.875rem;\n    line-height: 1.25rem;\n    --tw-text-opacity: 1;\n    color: rgb(14 116 144 / var(--tw-text-opacity, 1))\n}"],"names":[],"mappings":"AAAA"}},
+    {"offset": {"line": 38, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 41, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/humoyun/Desktop/my-project/my-task/src/app/components/AutoResponsesCheckbox/AutoResponcses.module.css"],"sourcesContent":[".container {\r\n    display: flex;\r\n    align-items: center\n}\r\n.container > :not([hidden]) ~ :not([hidden]) {\r\n    --tw-space-x-reverse: 0;\r\n    margin-right: calc(0.5rem * var(--tw-space-x-reverse));\r\n    margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))\n}\r\n.container {\r\n    padding-top: 0.5rem\n}\r\n.label {\r\n    font-size: 0.875rem;\r\n    line-height: 1.25rem;\r\n    --tw-text-opacity: 1;\r\n    color: rgb(55 65 81 / var(--tw-text-opacity, 1))\n}"],"names":[],"mappings":"AAAA;;;;;AAIA;;;;;;AAKA;;;;AAGA"}},
+    {"offset": {"line": 62, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack://[project]/src/app/components/AutoResponsesCheckbox/AutoResponcses.module.css"],"sourcesContent":[".container {\r\n    display: flex;\r\n    align-items: center\n}\r\n.container > :not([hidden]) ~ :not([hidden]) {\r\n    --tw-space-x-reverse: 0;\r\n    margin-right: calc(0.5rem * var(--tw-space-x-reverse));\r\n    margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))\n}\r\n.container {\r\n    padding-top: 0.5rem\n}\r\n.label {\r\n    font-size: 0.875rem;\r\n    line-height: 1.25rem;\r\n    --tw-text-opacity: 1;\r\n    color: rgb(55 65 81 / var(--tw-text-opacity, 1))\n}"],"names":[],"mappings":"AAAA;;;;;AAIA;;;;;;AAKA;;;;AAGA"}},
+    {"offset": {"line": 22, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

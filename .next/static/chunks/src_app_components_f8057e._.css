@@ -1,0 +1,41 @@
+/* [project]/src/app/components/BudgetSlider/BudgetSlider.module.css [app-client] (css) */
+.BudgetSlider-module__0ItECW__label {
+  font-size: .875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(14 116 144 / var(--tw-text-opacity, 1));
+}
+
+
+/* [project]/src/app/components/TagInput/TagInput.module.css [app-client] (css) */
+.TagInput-module__U8c6pG__label {
+  font-size: .875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(14 116 144 / var(--tw-text-opacity, 1));
+}
+
+
+/* [project]/src/app/components/Deadline/Deadline.module.css [app-client] (css) */
+.Deadline-module__A-GAha__label {
+  margin-bottom: .25rem;
+  display: block;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(14 116 144 / var(--tw-text-opacity, 1));
+}
+
+
+/* [project]/src/app/components/RemindersInput/Remainder.module.css [app-client] (css) */
+.Remainder-module__ngJJJW__label {
+  margin-bottom: .25rem;
+  display: block;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(14 116 144 / var(--tw-text-opacity, 1));
+}
+
+
+/*# sourceMappingURL=src_app_components_f8057e._.css.map*/
