@@ -8,17 +8,15 @@ interface TagInputProps {
     setTagsProps: (tags: string[]) => void;
 }
 
-
 export default function TagInput({ tagsProps, setTagsProps }: TagInputProps) {
     const { token } = theme.useToken();
-    const [tags, setTags] = useState<string[]>([]);
     const [inputVisible, setInputVisible] = useState(false);
     const [inputValue, setInputValue] = useState('');
     const inputRef = useRef<InputRef>(null);
 
     const handleClose = (removedTag: string) => {
-        const newTags = tags.filter((tag) => tag !== removedTag);
-        setTags(newTags);
+        const newTags = tagsProps.filter((tag) => tag !== removedTag);
+        setTagsProps(newTags);  // обновляем состояние в родительском компоненте
     };
 
     const showInput = () => {
@@ -30,8 +28,8 @@ export default function TagInput({ tagsProps, setTagsProps }: TagInputProps) {
     };
 
     const handleInputConfirm = () => {
-        if (inputValue && tags.indexOf(inputValue) === -1) {
-            setTags([...tags, inputValue]);
+        if (inputValue && tagsProps.indexOf(inputValue) === -1) {
+            setTagsProps([...tagsProps, inputValue]);  // обновляем состояние в родительском компоненте
         }
         setInputVisible(false);
         setInputValue('');
@@ -68,7 +66,7 @@ export default function TagInput({ tagsProps, setTagsProps }: TagInputProps) {
             <div>
                 <span className={styles.label}>Добавить теги</span>
             </div>
-            {tags.map(forMap)}
+            {tagsProps.map(forMap)}  {/* Используем tagsProps для отображения */}
             {inputVisible ? (
                 <Input
                     ref={inputRef}
@@ -86,5 +84,5 @@ export default function TagInput({ tagsProps, setTagsProps }: TagInputProps) {
                 </Tag>
             )}
         </div>
-    )
+    );
 }

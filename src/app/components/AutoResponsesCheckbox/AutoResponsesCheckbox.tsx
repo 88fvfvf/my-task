@@ -1,5 +1,4 @@
 import { Checkbox } from "antd";
-import { useState } from "react";
 import styles from "./AutoResponcses.module.css"
 
 interface AutoResponsesCheckboxProps {

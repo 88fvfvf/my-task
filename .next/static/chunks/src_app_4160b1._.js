@@ -33,7 +33,7 @@ function AutoResponsesCheckbox({ autoResponses, setAutoResponses }) {
                 onChange: (e)=>setAutoResponses(e.target.checked)
             }, void 0, false, {
                 fileName: "[project]/src/app/components/AutoResponsesCheckbox/AutoResponsesCheckbox.tsx",
-                lineNumber: 13,
+                lineNumber: 12,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -42,13 +42,13 @@ function AutoResponsesCheckbox({ autoResponses, setAutoResponses }) {
                 children: "Включить автоматические ответы"
             }, void 0, false, {
                 fileName: "[project]/src/app/components/AutoResponsesCheckbox/AutoResponsesCheckbox.tsx",
-                lineNumber: 18,
+                lineNumber: 17,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/components/AutoResponsesCheckbox/AutoResponsesCheckbox.tsx",
-        lineNumber: 12,
+        lineNumber: 11,
         columnNumber: 9
     }, this);
 }
@@ -291,13 +291,12 @@ var _s = __turbopack_refresh__.signature();
 function TagInput({ tagsProps, setTagsProps }) {
     _s();
     const { token } = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$theme$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__theme$3e$__["theme"].useToken();
-    const [tags, setTags] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const [inputVisible, setInputVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [inputValue, setInputValue] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('');
     const inputRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const handleClose = (removedTag)=>{
-        const newTags = tags.filter((tag)=>tag !== removedTag);
-        setTags(newTags);
+        const newTags = tagsProps.filter((tag)=>tag !== removedTag);
+        setTagsProps(newTags); // обновляем состояние в родительском компоненте
     };
     const showInput = ()=>{
         setInputVisible(true);
@@ -306,11 +305,11 @@ function TagInput({ tagsProps, setTagsProps }) {
         setInputValue(e.target.value);
     };
     const handleInputConfirm = ()=>{
-        if (inputValue && tags.indexOf(inputValue) === -1) {
-            setTags([
-                ...tags,
+        if (inputValue && tagsProps.indexOf(inputValue) === -1) {
+            setTagsProps([
+                ...tagsProps,
                 inputValue
-            ]);
+            ]); // обновляем состояние в родительском компоненте
         }
         setInputVisible(false);
         setInputValue('');
@@ -328,12 +327,12 @@ function TagInput({ tagsProps, setTagsProps }) {
                 children: tag
             }, void 0, false, {
                 fileName: "[project]/src/app/components/TagInput/TagInput.tsx",
-                lineNumber: 42,
+                lineNumber: 40,
                 columnNumber: 13
             }, this)
         }, tag, false, {
             fileName: "[project]/src/app/components/TagInput/TagInput.tsx",
-            lineNumber: 41,
+            lineNumber: 39,
             columnNumber: 9
         }, this);
     const tagPlusStyle = {
@@ -358,15 +357,16 @@ function TagInput({ tagsProps, setTagsProps }) {
                     children: "Добавить теги"
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/TagInput/TagInput.tsx",
-                    lineNumber: 69,
+                    lineNumber: 67,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/components/TagInput/TagInput.tsx",
-                lineNumber: 68,
+                lineNumber: 66,
                 columnNumber: 13
             }, this),
-            tags.map(forMap),
+            tagsProps.map(forMap),
+            "  ",
             inputVisible ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$input$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Input$3e$__["Input"], {
                 ref: inputRef,
                 type: "text",
@@ -380,7 +380,7 @@ function TagInput({ tagsProps, setTagsProps }) {
                 onPressEnter: handleInputConfirm
             }, void 0, false, {
                 fileName: "[project]/src/app/components/TagInput/TagInput.tsx",
-                lineNumber: 73,
+                lineNumber: 71,
                 columnNumber: 17
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$tag$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Tag$3e$__["Tag"], {
                 onClick: showInput,
@@ -388,24 +388,24 @@ function TagInput({ tagsProps, setTagsProps }) {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ant$2d$design$2f$icons$2f$es$2f$icons$2f$PlusOutlined$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__PlusOutlined$3e$__["PlusOutlined"], {}, void 0, false, {
                         fileName: "[project]/src/app/components/TagInput/TagInput.tsx",
-                        lineNumber: 85,
+                        lineNumber: 83,
                         columnNumber: 21
                     }, this),
                     " Добавить"
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/components/TagInput/TagInput.tsx",
-                lineNumber: 84,
+                lineNumber: 82,
                 columnNumber: 17
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/components/TagInput/TagInput.tsx",
-        lineNumber: 67,
+        lineNumber: 65,
         columnNumber: 9
     }, this);
 }
-_s(TagInput, "9czPLqKvJhBQUzJkZLF4hCO9leI=", false, function() {
+_s(TagInput, "eXWwVZQnd6TE5JaQGPYm/jSYB48=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$theme$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__theme$3e$__["theme"].useToken
     ];
